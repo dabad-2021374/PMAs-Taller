@@ -80,13 +80,17 @@ export const deleteA = async(req, res)=>{
     }
 }
 
-export const searchAnimal = async(req, res)=>{
+export const search = async(req, res)=>{
     try{
+        //Obtener el parámetro de búsqueda
         let { search } = req.body
+        //Buscar
         let animals = await Animal.find(
             {name: search}
         ).populate('keeper', ['name', 'phone'])
+        //Validar la respuesta
         if(!animals) return res.status(404).send({message: 'Animals not found'})
+        //Responder si todo sale bien
         return res.send({message: 'Animals found', animals})
     }catch(err){
         console.error(err)
