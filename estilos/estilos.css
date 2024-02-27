@@ -1,0 +1,20 @@
+body {
+    background-color: #33FFD4;
+    background-color: antiquewhite;
+
+  }
+  
+  #mi-canvas {
+    background-color: aliceblue;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 50vw;
+    height: 50vh;
+    align-items: center;
+  }
+
+  .button{
+    background-color: rgb(0, 0, 0);
+  }
+
+  
